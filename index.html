@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Model Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1><span class="emoji">🎨</span> Color Model Converter</h1>
+
+    <div class="input-section">
+      <label>RGB:</label>
+      <input type="number" id="r" placeholder="R" min="0" max="255" />
+      <input type="number" id="g" placeholder="G" min="0" max="255" />
+      <input type="number" id="b" placeholder="B" min="0" max="255" />
+
+      <label for="cb-mode">Color Blind Mode:</label>
+      <select id="cb-mode">
+        <option value="normal">Normal</option>
+        <option value="protanopia">Protanopia</option>
+        <option value="deuteranopia">Deuteranopia</option>
+        <option value="tritanopia">Tritanopia</option>
+      </select>
+
+      <button onclick="convertColors()">Convert</button>
+    </div>
+
+    <div id="color-display" class="color-display"></div>
+
+    <div class="converted-values" id="converted-values"></div>
+
+    <div id="palette" class="palette"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
